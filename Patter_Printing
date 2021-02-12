@@ -1,0 +1,23 @@
+import java.util.*;
+public class pattern {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		input = input.substring((input.length()/2), input.length()) + input.substring(0,(input.length()/2));
+		
+		for(int i = 0; i < input.length();i++)
+		{
+			String temp = "";
+			int k = i;
+			while(k < input.length()-1)
+			{
+				temp = temp + " ";	
+				k++;
+			}
+			temp = temp + input.substring(0, input.length() - temp.length());
+			System.out.println(temp);
+		}
+		sc.close();
+	}
+}
