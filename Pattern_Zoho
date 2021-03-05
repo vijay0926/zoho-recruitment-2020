@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Test {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+	        String input = sc.nextLine();
+		input = input.substring((input.length()/2), input.length()) + input.substring(0,(input.length()/2));
+		String temp = new String(new char[input.length()]).replace('\0', ' ');
+
+		for(int i = 0; i< input.length(); i++)
+		{
+			System.out.println(temp.substring(0,input.length()-i-1)+input.substring(0,i+1));
+		}
+		sc.close();
+	}
+}
